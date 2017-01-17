@@ -10,7 +10,7 @@
 
 
 
-my $VERSION = 0.01; # 2016 jan 13 -- xanatax
+my $VERSION = 0.02; # 2017 jan 16 -- xanatax, uploaded to github!
 
 #
 #	perl mac_speechbot.pl
