@@ -100,10 +100,10 @@ use strict;
 use warnings;
 use utf8;
 
-use Switch;											# <--- 
+use Switch;                                          # <--- 
 
 use POE;
-use POE qw( Component::IRC );						# <---
+use POE qw( Component::IRC );                        # <---
 use POE qw( Wheel::Run );
 
 use Time::HiRes qw( time );
@@ -167,13 +167,13 @@ my $irc = POE::Component::IRC->spawn(
 POE::Session->create(
 	package_states => [
 		main => [ qw( 
-					  _default  _start  _stop  irc_connected  irc_cap  irc_376
-					  irc_public  irc_whisper  irc_ctcp_action  irc_ctcp 
-					  irc_353  irc_366  irc_ping  irc_join  irc_part
-					  irc_mode
-					  got_child_stdout  got_child_stderr  got_child_close  got_child_signal 
-					  mac_say
-				    ) ],
+			      _default  _start  _stop  irc_connected  irc_cap  irc_376
+			      irc_public  irc_whisper  irc_ctcp_action  irc_ctcp 
+			      irc_353  irc_366  irc_ping  irc_join  irc_part
+			      irc_mode
+			      got_child_stdout  got_child_stderr  got_child_close  got_child_signal 
+			      mac_say
+		        ) ],
 	],
 	inline_states => {
 		irc_001 =>	=> \&irc_welcome,
@@ -255,7 +255,7 @@ sub _start {
 ### -----------
 #  just some text so we know when  _stop  gets called.
 
-sub _stop(){
+sub _stop {
 
 	print 'I want to stop!  let me stop!',$/;
 	
@@ -385,13 +385,13 @@ sub irc_mode {
 #  ( these can get a little spammy if I leave them as 'debug' info )
 #  assigning an empty subroutine means "do nothing at all"
 
-sub irc_353{  }
-sub irc_366{  }
+sub irc_353 {  }
+sub irc_366 {  }
 
-sub irc_join{  }
-sub irc_part{  }
+sub irc_join {  }
+sub irc_part {  }
 
-sub irc_ping{  }
+sub irc_ping {  }
 
 
 
@@ -401,7 +401,7 @@ sub irc_ping{  }
 #		this bot... doesn't.
 #
 
-sub irc_ctcp_action{ 
+sub irc_ctcp_action { 
 	# my ($sender, $who, $where, $what) = @_[SENDER, ARG0 .. $#_];
  	# my $nick = ( split /!/, $who )[0];
  	
@@ -415,7 +415,7 @@ sub irc_ctcp_action{
 	return;
 }
 
-sub irc_ctcp{
+sub irc_ctcp {
 	#
 	# twitch sends a duplicate set of data for /me actions.
 	# ...usually, this means pick one, discard the other.
@@ -431,7 +431,7 @@ sub irc_ctcp{
 #	receive /whisper
 #
 
-sub irc_whisper{  
+sub irc_whisper {  
 	my ($from, $to, $message) = @_[ARG0 .. $#_];
 	my $nick = ( split /!/, $from )[0];
 	print $/, 'WHISPER from: ', $nick, "\t::\t", $message, $/, $/;
