@@ -74,7 +74,6 @@ my $default_voice = 'Fred';
 
 
 
-# ------	we're going to use some perl modules to make life easy!
 #
 #	this is where you can stop reading!   (unless you haven't installed modules, yet)
 #
@@ -95,6 +94,7 @@ my $default_voice = 'Fred';
 #
 
 
+# ------	we're going to use some perl modules to make life easy!
 
 use strict;
 use warnings;
