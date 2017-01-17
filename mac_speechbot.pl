@@ -23,7 +23,7 @@ my $VERSION = 0.02; # 2017 jan 16 -- xanatax, uploaded to github!
 #	[     altho... update for 'mods-only' is pretty easy.  ]
 #
 #	please read & modify this block of variables...
-#		the first 30-lines are just config!
+#		the next 30-lines are just config!
 #
 #	this is perl code, not C ... to some extent, humans read this!
 #		( or, skim over the code, and read the comments. )
