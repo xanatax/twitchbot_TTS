@@ -5,7 +5,7 @@
 #		...if you don't have "modules" installed, that I use!!
 #	DON'T PANIC!   =D
 #		errors on lines 99-110 mean you need to install something!
-#		for instructions to install perl modules: read lines 81-91
+#		for instructions to install perl modules: read lines 80-90
 #
 
 
