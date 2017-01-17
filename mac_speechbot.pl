@@ -498,6 +498,10 @@ sub irc_public {
 			$_[KERNEL]->yield(  'mac_say', $1, $default_voice  );
 		}
 
+		if(  $what =~ /^fred (.*)$/  ){
+			$_[KERNEL]->yield(  'mac_say', $1, 'Fred'  );
+		}
+
 		if(  $what =~ /^zarvox (.*)$/  ){
 			$_[KERNEL]->yield(  'mac_say', $1, 'Zarvox'  );
 		}
