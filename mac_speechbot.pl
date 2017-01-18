@@ -635,7 +635,7 @@ sub mac_say {
 
 	my $voice;
 	if(  defined($_[ARG1])  ){  $voice = $_[ARG1];  }
-	else{  $voice = 'Fred';  }
+	else{  $voice = $default_voice;  }
 	
 	print '> say -v ', $voice, ' "', $ttspeak, '"', $/;
 
