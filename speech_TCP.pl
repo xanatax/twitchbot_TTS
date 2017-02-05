@@ -22,9 +22,9 @@ POE::Component::Server::TCP->new(
 	},
 	PackageStates => [
 		main => [ qw( 
-					  got_child_stdout  got_child_stderr  got_child_close  got_child_signal 
-					  mac_say
-				    ) ],
+			got_child_stdout  got_child_stderr  got_child_close  got_child_signal 
+			mac_say
+		) ],
 	],
 );
 
