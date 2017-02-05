@@ -17,8 +17,6 @@ POE::Component::Server::TCP->new(
 	ClientInput => sub {
 		my $client_input = $_[ARG0];
 		$_[KERNEL]->yield(  'mac_say', $client_input  );
-# 		$client_input =~ tr[a-zA-Z][n-za-mN-ZA-M];
-# 		$_[HEAP]{client}->put($client_input);
 	},
 	PackageStates => [
 		main => [ qw( 
